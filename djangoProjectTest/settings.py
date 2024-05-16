@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 添加应用名放在Django中
+    "news",
+    "appTest"
 ]
 
 MIDDLEWARE = [
