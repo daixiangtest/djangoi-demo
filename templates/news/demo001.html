@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>模板变量的引用</title>
+</head>
+<body>
+<h1>模板变量的引用</h1>
+{# 变量的引用 #}
+<div>
+    姓名为：{{ name }} {# 引用变量 #}
+    年龄：{{ age }}
+    成绩：{{ chengji.语文 }} {# 通过字典的key获取值 #}
+    列表取值：{{ list.2 }} {# 通过下标索引获取值 #}
+</div>
+{# for循环和if逻辑判断表达式 #}
+<div>
+    {% for i in list %}
+        值为：{{ i }}
+        {% if i < 44 %}
+            <li style="background: blue">值大于：{{ i }}</li>
+            {% elif i < 55 %}
+            <li style="background: orange">值大于：{{ i }}</li>
+            {% else %}
+            <li style="background: red">值大于：{{ i }}</li>
+        {% endif %}
+    {% endfor %}
+
+</div>
+{# 过滤器的表达 | #}
+列表的长度为 {{ list | length }}
+时间格式改为 {{ date | date:"y-m-d" }}
+
+<div>
+
+
+</div>
+</body>
+</html>

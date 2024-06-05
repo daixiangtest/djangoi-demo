@@ -1,0 +1,15 @@
+{% extends 'news/bash.html' %} <!--继承bash.html页面-->
+{% block quyu2 %} <!--添加预留区域的内容-->-->
+    {% for new in new_list %}
+        <h3>
+            <li>{{ new.title }}</li>
+        </h3>
+    {% endfor %}
+{% endblock quyu2 %}
+{% block quyu1 %}
+    {% for new in new_list %}
+        <h3>
+            <li>{{ new.content }}</li>
+        </h3>
+    {% endfor %}
+{% endblock %}

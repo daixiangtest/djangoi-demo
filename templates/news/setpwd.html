@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户名注册成功或更改密码</title>
+</head>
+<body>
+<form method="post" action="/news/user/">
+    账号：<input type="text" name="name"><br/>
+    密码：<input type="password" name="password">
+    {% csrf_token %} {# 当请求为post请求并且开启了crs验证时需要该内容 #}
+    <input type="submit" value="更改">
+</form>
+<h1>post方式提交数据</h1>
+提交的账号:{{ name }}<br/>
+提交的密码:{{ password }}<br/>
+</body>
+</html>

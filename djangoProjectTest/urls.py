@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # re_path方法获取news/开头的路径，转到news.urls文件中查找对应的路径方法
+    re_path(r'^news/', include("news.urls"))
 ]
